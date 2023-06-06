@@ -7225,8 +7225,8 @@ img {
 }
 .roll__area-2 {
   padding: 31px 10px;
-  background-color: var(--black-2);
-  margin-top: -8%;
+  background-color: var(--black-2);  
+  margin-top: -30%;
 }
 .roll__area-2 .roll__slide h2 {
   color: var(--white);
@@ -34521,6 +34521,71 @@ ul.mega-menu-2.woocomerce-megamenu {
   margin-right: 0;
   margin-left: -320px;
 }
+
+.bdy{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: white;
+}
+
+.contini{
+  display:flex;
+  width: 100vw;
+  margin-top: -33%;
+}
+
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 767px) {
   .dir-rtl .career__thumb .inherit {
     margin-left: calc(-0.5 * var(--bs-gutter-x));
@@ -35114,7 +35179,19 @@ z-index: 9;
     margin-left: -24%;
 }
 
+.ppex{
+  color: white;
+  font-size: 5rem;
+  margin-top: 7%;
+  text-shadow: 
+    2px 2px 0 black;
 
+}
+.ppi{
+    text-shadow: 
+    2px 2px 0 black;
+
+}
 
 
 @keyframes rotate {
@@ -35246,5 +35323,11 @@ width: 10%;
 }
 .w67{
   width: 67%;
+}
+.contini {
+  margin-top: -24%;
+}
+.roll__area-2 {
+  margin-top: -24%;
 }
 }

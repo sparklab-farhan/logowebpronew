@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="assets/css/master.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.1.0/dist/model-viewer.min.js"></script>
 </head>
 
 
@@ -224,74 +225,44 @@
 
 
        <!-- Service area start -->
-       <section class="service__area-2 pt-130 pb-110">
-        <div class="container">
-          <div class="row">
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-              <div class="sec-text text-anim">
-                <p>With unwavering passion, we craft captivating logos and websites that leave a lasting impression, elevating your brand to new heights of success.</p>
-              </div>
+       <div class="bdy">
+       <div class="contini">
+        <div class="panel active"
+            style="background-image: url('assets/imgs/gr.jpg')">            
+            <div class="text-anim text-center">
+              <h3 class="ppi">Stunning visuals that capture attention and inspire creativity. Experience it!</p>
             </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-              <div class="sec-title-wrapper">
-                <h2 class="sec-title title-anim"> Unleashing Stunning Logos and Websites</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="row pt-140">
-            <div class="col-xxl-12">
-              <div class="service__list-2 animation__service-2">
-                <div class="service__item-2">
-                  <div>
-                    <img src="assets/imgs/b.png" alt="Service Icon" class="roundy">
-                    <h3 class="service__title-2">Branding <br>Design</h3>
-                    <p>Ignite your brand's identity with our exceptional logo design services that leave a lasting impression.
-                    </p>
-                    <ul>
-                      <li>◾️ Emblem</li>
-                      <li>◾️ Abstract</li>
-                      <li>◾️ Mascot</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="service__item-2">
-                  <div>
-                    <img src="assets/imgs/www.png" alt="Service Icon" class="conimg roundy">
-                    <h3 class="service__title-2 ">Website <br>Design</h3>
-                    <p>Crafting Exceptional Website Designs<br> with Innovation and Flawless Functionality.
-                    </p>
-                    <ul>
-                      <li>◾️ E-Commerce Website</li>
-                      <li>◾️ Productivity Website</li>
-                      <li>◾️ Gaming Website</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="service__item-2">
-                  <div>
-                    <img src="assets/imgs/s.png" alt="Service Icon" class="conimg roundy">
-                    <h3 class="service__title-2">Search Engine <br>Optimization</h3>
-                    <p>Let's have your online presence with effective Search Engine Optimization strategies and techniques.
-                    </p>
-                    <ul>
-                      <li>◾️ On-Page SEO</li>
-                      <li>◾️ Off-Page SEO</li>
-                      <li>◾️ Technical SEO</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-12">
-              <div class="service__btn-2 btn_wrapper">
-                <a href="#" class="wc-btn-pink btn-hover btn-item"><span></span> View <br>all services
-                  <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+
+        <div class="panel"
+            style="background-image: url('assets/imgs/wd.jpg')">
+            <div class="text-anim text-center">
+              <h3 class="ppi">Beautiful websites that captivate, engage, and leave a lasting impression.</h3>
+            </div>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('assets/imgs/ma.jpg')">
+            <div class="text-anim text-center">
+              <h3 class="ppi">Sleek mobile apps that deliver seamless experiences and drive engagement.</h3>
+            </div>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('assets/imgs/smm.jpg')">
+            <div class="text-anim text-center">
+              <h3 class="ppi">Boost your brand with effective social media strategies that drive results.</h3>
+            </div>
+        </div>
+
+        <div class="panel"
+            style="background-image: url('assets/imgs/seo.jpg')">
+            <div class="text-anim text-center">
+              <h3 class="ppi">Enhance your online presence and rank higher with expert SEO.</h3>
+            </div>
+        </div>
+    </div>
+  </div>
       <!-- Service area end -->
 
 
@@ -752,7 +723,7 @@
             <div class="container footer-line"></div>
             <img src="assets/imgs/nw.jpg" alt="Footer Image" data-speed="0.75" class="w67">            
           </div>
-  
+          <model-viewer src="assets/imgs/Final GLOBE 3D ASSETS.gltf" alt="3D Model" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
           <div class="footer__btm">
             <div class="container">
               <div class="row footer__row">
@@ -839,6 +810,29 @@
   <script src="assets/js/jquery.meanmenu.min.js"></script>
   <script src="assets/js/main.js"></script>
 
+
+  <!-- for expand carousal -->
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+panels.forEach((panel) => {
+  panel.addEventListener('mouseenter', () => {
+    removeActiveClasses();
+    panel.classList.add('active');
+    panel.querySelector('.ppx').classList.add('show');
+  });
+
+  panel.addEventListener('mouseleave', () => {
+    panel.querySelector('.ppx').classList.remove('show');
+  });
+});
+
+function removeActiveClasses() {
+  panels.forEach((panel) => {
+    panel.classList.remove('active');
+  });
+}
+    </script>
 
 </body>
 
